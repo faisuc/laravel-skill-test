@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/' , [
+	'uses'	=> 'Controller@index'
+]);
+
+
+Route::post('/form/submit' , [
+	'uses' => 'Controller@form_submit'
+]);
